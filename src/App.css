@@ -4,6 +4,9 @@
   background-color: #d2dcff;
   box-sizing: border-box;
   border: 1px solid black;
+  max-width: 600px;
+  max-height: 600px;
+  margin: auto;
 
 }
 

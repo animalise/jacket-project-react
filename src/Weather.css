@@ -13,8 +13,8 @@ input[type=search] {
 }
 
 .searchForm {
-  width: 600px;
-  height: 400px;
+  max-width: 600px;
+  max-height: 400px;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -31,9 +31,16 @@ input[type=search] {
 }
 
 .btn-outline-light:hover {
-  border: 1px solid purple;
+  border: 1px solid white;
+  background-color: rgba(125, 3, 173, 0.952);
+  color: white;
 }
 
 h2 {
   margin: 30px auto;
+}
+
+
+ul {
+  list-style: none;
 }
