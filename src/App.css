@@ -1,3 +1,17 @@
 .App {
   text-align: center;
+  padding: 40px;
+  background-color: #d2dcff;
+  box-sizing: border-box;
+  border: 1px solid black;
+
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px rgba(138, 15, 238, 0.4);
+  text-align: center;
 }
