@@ -5,6 +5,7 @@ import './Weather.css';
 export default function Weather(props) {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState({});
+  const [loaded, setLoaded] = useState(false);
 
   function updateCityData(event) {
     setCity(event.target.value);
@@ -18,17 +19,17 @@ export default function Weather(props) {
   }
 
   function handleResponse(response) {
+    setLoaded(true);
     setWeather({
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      wind: response.data.wind,
+      wind: response.data.wind.speed,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
-    console.log(response.data);
   }
 
-    return (
-      <div className="searchForm">
+let searchForm = (
+   <div className="searchForm">
         <form onSubmit={handleSubmit}>
           <input
             type="search"
@@ -44,19 +45,30 @@ export default function Weather(props) {
             Current Location
           </button>
         </form>
+        </div>
+);
+
+if (loaded)  {
+    return (
         <div className="weatherInfo">
+          {searchForm}
           <ul>
             <li>
               <h2> {city} </h2>
             </li>
             <li>Temperature: {weather.temperature}°F </li>
             <li>Description: {weather.description}</li>
-            <li>Do I need a Jacket? {props.jacket}</li>
+            <li> Wind: {weather.wind} mph </li>
+            <li>Do I need a jacket? {props.jacket}</li>
             <li>
               <img src={weather.icon} alt="weather icon"></img>
             </li>
           </ul>
         </div>
-      </div>
-    ); 
-  }
+    );
+    } else {
+      return (
+        (searchForm)
+        );
+        };
+}
