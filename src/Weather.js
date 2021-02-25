@@ -30,6 +30,7 @@ export default function Weather(props) {
 
 let searchForm = (
    <div className="searchForm">
+        <div className="row">
         <form onSubmit={handleSubmit}>
           <input
             type="search"
@@ -46,24 +47,31 @@ let searchForm = (
           </button>
         </form>
         </div>
+        </div>
 );
 
 if (loaded)  {
     return (
         <div className="weatherInfo">
           {searchForm}
+          <div className="row">
+          <div className="col-6">
           <ul>
             <li>
-              <h2> {city} </h2>
+              <h2>{city}</h2>
             </li>
-            <li>Temperature: {weather.temperature}°F </li>
-            <li>Description: {weather.description}</li>
-            <li> Wind: {weather.wind} mph </li>
-            <li>Do I need a jacket? {props.jacket}</li>
-            <li>
-              <img src={weather.icon} alt="weather icon"></img>
-            </li>
-          </ul>
+            <li><h3>{weather.temperature}°F </h3></li>
+            </ul>
+            </div>
+            <div className="col-6">
+            <ul>
+              <li><img src={weather.icon} alt="weather icon"></img></li>
+            <li>{weather.description}</li>
+            <li>wind: {weather.wind} mph </li>
+            <li>do I need a jacket? {props.jacket}</li>
+            </ul>
+            </div>
+        </div>
         </div>
     );
     } else {

@@ -11,10 +11,14 @@
 }
 
 h1 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: 0 0 4px 1px rgba(138, 15, 238, 0.4);
   text-align: center;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
