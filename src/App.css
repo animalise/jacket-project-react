@@ -6,12 +6,12 @@
   border: 1px solid black;
   max-width: 600px;
   max-height: 600px;
-  margin: auto;
+  margin: 0px auto;
+  margin-top: 40px;
 
 }
 
 h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 4px;
@@ -21,4 +21,6 @@ h1 {
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
 }
+

@@ -57,19 +57,21 @@ if (loaded)  {
           <div className="row">
           <div className="col-6">
           <ul>
-            <li>
-              <h2>{city}</h2>
-            </li>
-            <li><h3>{weather.temperature}°F </h3></li>
-            </ul>
+            <li><h2>{city}</h2></li>
+            <li> time and date </li>
+            <li><h3>
+              {weather.temperature}
+                <span className="units"><span className="fahrenheit">°F</span> | <span className="celsius">C</span></span>
+            </h3></li>
+          </ul>
             </div>
             <div className="col-6">
-            <ul>
-              <li><img src={weather.icon} alt="weather icon"></img></li>
+          <ul>
+            <li><img src={weather.icon} alt="weather icon"></img></li>
             <li>{weather.description}</li>
             <li>wind: {weather.wind} mph </li>
             <li>do I need a jacket? {props.jacket}</li>
-            </ul>
+          </ul>
             </div>
         </div>
         </div>
