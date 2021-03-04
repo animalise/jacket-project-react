@@ -1,17 +1,16 @@
 import React, {useState} from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import './Weather.css';
 import Loader from "react-loader-spinner";
-
+import './Weather.css';
 
 export default function Weather(props) {
-    const [weather, setWeather] = useState({ready: false});
+    const [weatherData, setWeatherData] = useState({ready: false});
     const [city, setCity] = useState(props.defaultCity);
 
 
     function handleResponse(response) {
-    setWeather({
+    setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
@@ -40,16 +39,15 @@ export default function Weather(props) {
   }
 
 
-if (weather.ready)  {
+if (weatherData.ready)  {
     return (
       <div className="Weather">
-        <div className="row">
           <form onSubmit={handleSubmit}>
-            <input
+            <div className="row">
+              <input
               type="search"
               placeholer="Enter a city..."
-              autoComplete="off"
-              autoFocus={true}
+              autoFocus="on"
               onChange={updateCityData}
             />
             <button type="button" className="btn btn-outline-dark">
@@ -58,9 +56,10 @@ if (weather.ready)  {
             <button type="button" className="btn btn-outline-light">
               Current Location
           </button>
+          </div>
           </form>
-        </div>
-      <WeatherInfo data={weather}/>
+        
+      <WeatherInfo data={weatherData}/>
       </div>  
     );
     } else {
