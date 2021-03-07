@@ -51,15 +51,16 @@ if (weatherData.ready)  {
               onChange={updateCityData}
             />
             <button type="button" className="btn btn-outline-dark">
-              Search
+              🔎
           </button>
-            <button type="button" className="btn btn-outline-light">
+            <button type="button" className="btn btn-outline-dark">
               📍
           </button>
           </div>
           </form>
-        
+        <div className="WeatherInfoContainer">
       <WeatherInfo data={weatherData}/>
+      </div>
       </div>  
     );
     } else {

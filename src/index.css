@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #202025;
+  background-color: #7777c0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,6 +11,10 @@ body {
 
 small {
   color: white;
+}
+
+small a {
+  color: rgb(242, 178, 248);
 }
 
 code {
