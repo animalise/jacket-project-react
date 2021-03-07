@@ -54,7 +54,7 @@ if (weatherData.ready)  {
               Search
           </button>
             <button type="button" className="btn btn-outline-light">
-              Current Location
+              📍
           </button>
           </div>
           </form>
