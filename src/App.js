@@ -4,10 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Do I Need A Jacket?</h1>
-      <Weather  defaultCity="New York"/>
-      </div>
-    );
+      <h1 className="text-uppercase">Do I Need A Jacket?</h1>
+      <Weather defaultCity="New York" />
+    </div>
+  );
 }
 
 export default App;

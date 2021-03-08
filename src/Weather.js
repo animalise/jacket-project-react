@@ -18,8 +18,9 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      jacket: "Bring a jacket!",
       city: response.data.name,
+      lon: response.data.coord.lon,
+      lat: response.data.coord.lat,
     });
   }
 
@@ -39,6 +40,18 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
+  function searchLocation(position) {
+    let lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+    let apiKey = "af173d370d3263e90c511e8cd78a494a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
 if (weatherData.ready)  {
     return (
@@ -54,7 +67,7 @@ if (weatherData.ready)  {
             <button type="button" className="btn btn-outline-dark">
               🔎
           </button>
-            <button type="button" className="btn btn-outline-dark">
+            <button type="button" className="btn btn-outline-dark" onClick={getCurrentLocation}>
               📍
           </button>
           </div>

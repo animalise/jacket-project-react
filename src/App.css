@@ -2,9 +2,9 @@
   text-align: center;
   padding: 40px;
   border-radius: 4px;
-  border: 1px solid rgba(135, 54, 173, 0.459);
-  background-color: rgb(204, 209, 255);
-  box-shadow: 0 0 6px 1px rgba(78, 15, 80, 0.89);
+  border: 1px solid #60316E;
+  background-color: #CFCBF1;
+  box-shadow: 0 0 6px 1px #60316E;
   max-width: 600px;
   max-height: 600px;
   margin: 0px auto;
@@ -12,8 +12,10 @@
 }
 
 h1 {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
   box-sizing: border-box;
-  background-color: rgba(173, 247, 209, 0.616);
+  background-color: #E1FECE;
   border: 1px solid rgba(78, 15, 80, 0.89);
   border-radius: 4px;
   box-shadow: 0 0 4px 1px rgba(117, 22, 121, 0.89);

@@ -21,14 +21,12 @@ export default function WeatherForecast(props) {
         <WeatherForecastPreview data={forecast.list[2]} />
         <WeatherForecastPreview data={forecast.list[3]} />
       </div>
-    );
-
-
+    )
   } else {
-  let apiKey = "af173d370d3263e90c511e8cd78a494a";
-  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
-  axios.get(url).then(handleForecastResponse);
+    let apiKey = "af173d370d3263e90c511e8cd78a494a";
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
+    axios.get(url).then(handleForecastResponse);
 
-  return null;
+    return null;
   }
 }

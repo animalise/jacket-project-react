@@ -7,3 +7,7 @@
   display: block;
   margin: 5px auto;
 }
+
+.WeatherForecast {
+  font-size: 16px;
+}
