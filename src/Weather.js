@@ -50,7 +50,7 @@ export default function Weather(props) {
     let lat = position.coords.latitude;
     let apiKey = "af173d370d3263e90c511e8cd78a494a";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).then(updateCityData);
   }
 
 if (weatherData.ready)  {
