@@ -60,7 +60,7 @@ if (weatherData.ready)  {
             <div className="row">
               <input
               type="search"
-              placeholer="Enter a city..."
+              placeholder="Enter a city..."
               autoFocus="on"
               onChange={updateCityData}
             />
